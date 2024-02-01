@@ -28,10 +28,12 @@
               <div class="by-name">{{ byName(comment.by) }}</div>
               <EditableDiv v-model="comment.comment" />
             </div>
-            <button @click="saveComment(index, commentIndex)">Save</button>
-            <button @click="cancelEditComment(index, commentIndex)">
-              Cancel
-            </button>
+            <div class="action-list edit">
+              <button @click="saveComment(index, commentIndex)">Save</button>
+              <button @click="cancelEditComment(index, commentIndex)">
+                Cancel
+              </button>
+            </div>
           </div>
           <div v-else class="comment-wrapper">
             <span class="by">{{ comment.by }}</span>
